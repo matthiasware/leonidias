@@ -1,5 +1,6 @@
 # Zufällige Schatzsuche
 from random import randint
+from schatz_gui import SchatzGUI
 
 
 def search_schatz(n):
@@ -27,3 +28,6 @@ def search_schatz(n):
                 ich[0] = n-1
         pfad.append(ich.copy())
     return pfad, schatz
+
+
+SchatzGUI(search_schatz).start()
